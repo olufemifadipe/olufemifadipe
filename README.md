@@ -15,9 +15,6 @@ internships, junior developer positions,
 and opportunities to collaborate on
 meaningful development projects.
 
-## 📊 GitHub Activity
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=olufemifadipe&show_icons=true&theme=tokyonight)
 
 What I'd prioritize first
 
