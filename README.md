@@ -8,6 +8,19 @@ My experience includes working with **Python, Java, MySQL, HTML5, and CSS**, alo
 
 I'm passionate about developing practical solutions, strengthening my programming abilities, and building a portfolio that reflects my growth as an aspiring software engineer.
 
+## 🤝 Open to Opportunities
+
+I'm interested in software engineering
+internships, junior developer positions,
+and opportunities to collaborate on
+meaningful development projects.
+
+## 📊 GitHub Activity
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=olufemifadipe&show_icons=true&theme=tokyonight)
+
+What I'd prioritize first
+
 ## 💻 Technical Skills
 
 - **Programming Languages:** Python, Java
