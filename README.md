@@ -16,7 +16,6 @@ and opportunities to collaborate on
 meaningful development projects.
 
 
-What I'd prioritize first
 
 ## 💻 Technical Skills
 
