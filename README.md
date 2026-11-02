@@ -127,14 +127,15 @@ Working with styling, layouts, and improving the visual presentation of websites
 
 ---
 
+
 ## 📊 A Look at My GitHub
 
 ### Languages Across My Repositories
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=olufemifadipe&layout=compact&theme=tokyonight&langs_count=8)
+![Top Languages](https://github-stats-extended.vercel.app/api/top-langs/?username=olufemifadipe&layout=compact&theme=tokyonight&langs_count=8)
 
 *These statistics reflect the languages used across my repositories, not necessarily my level of proficiency.*
-
+  
 ---
 
 ## 🎯 Where I'm Headed
