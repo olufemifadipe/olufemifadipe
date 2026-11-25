@@ -1,23 +1,9 @@
 <picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/profile-dark-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dark.svg">
-  <img src="assets/profile-light.svg" alt="Olufemi Rafael Fadipe — Application development, automation and local AI" width="100%">
+  <source media="(max-width: 900px)" srcset="assets/profile-light-mobile.svg">
+  <img src="assets/profile-light.svg" alt="Olufemi Rafael Fadipe — Application development, automation and local AI. Cayman Islands. Building practical applications. I'm Rafael, an Information Technology student at Florida International University, based in the Cayman Islands. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation." width="100%">
 </picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/intro-dark-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/intro-dark.svg">
-  <source media="(max-width: 900px)" srcset="assets/cards/intro-light-mobile.svg">
-  <img src="assets/cards/intro-light.svg" alt="Building practical applications. I'm Rafael, an Information Technology student at Florida International University, based in the Cayman Islands. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation." width="100%">
-</picture>
-
-<details>
-<summary>Read about me</summary>
-
-# Building practical applications.
-
-I'm Rafael, an Information Technology student at **Florida International University**, based in the **Cayman Islands**. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation.
-
-</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/jobbot-dark-mobile.svg">
@@ -78,17 +64,6 @@ Searching for development roles showed me how much time goes into finding releva
 </a>
 </p>
 
-<details>
-<summary>Read the project details as a table</summary>
-
-| Project | What I built | Technologies |
-| :--- | :--- | :--- |
-| **[Verdant Clay](https://github.com/olufemifadipe/verdant-clay-website)** | A jewelry website prototype with collection filters, product detail dialogs, and WhatsApp enquiries. | HTML · CSS · JavaScript |
-| **[Air Quality Explorer](https://github.com/olufemifadipe/aqi_project)** | A Python application that retrieves IQAir air quality and weather data, processes JSON responses, and generates a Folium map. | Python · REST APIs · Folium |
-| **[Musical Instruments](https://github.com/olufemifadipe/Musical-Instruments-Strategy-Pattern)** | An object-oriented implementation of the Strategy Pattern, separating instruments from interchangeable playing behaviors. | Python · OOP · Design patterns |
-
-</details>
-
 ## Tools I work with
 
 <picture>
@@ -97,17 +72,6 @@ Searching for development roles showed me how much time goes into finding releva
   <source media="(max-width: 900px)" srcset="assets/cards/tools-light-mobile.svg">
   <img src="assets/cards/tools-light.svg" alt="Tools I work with. Languages: Python, Java, SQL, HTML, CSS, JavaScript. Data and automation: SQLite, MySQL, REST APIs, JSON, Playwright. Development: Git, GitHub, Linux, VS Code, pytest." width="100%">
 </picture>
-
-<details>
-<summary>Read the tools as a table</summary>
-
-| Area | Tools |
-| :--- | :--- |
-| **Languages** | Python · Java · SQL · HTML · CSS · JavaScript |
-| **Data & automation** | SQLite · MySQL · REST APIs · JSON · Playwright |
-| **Development** | Git · GitHub · Linux · VS Code · pytest |
-
-</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/nova-dark-mobile.svg">

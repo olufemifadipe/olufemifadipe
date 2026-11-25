@@ -232,20 +232,74 @@ def narrative_card(slug, theme, mobile):
     return shell(width, height, c, title, description, body)
 
 
+def profile_card(theme, mobile):
+    """Keep the identity banner and introduction inside one continuous frame."""
+    c = PALETTES[theme]
+    width, pad = (440, 30) if mobile else (960, 36)
+    body = (f'<rect x="{pad}" y="32" width="30" height="24" rx="5" '
+            f'fill="{c["accent"]}" fill-opacity=".12"/>')
+    body += text(pad + 15, 49, "RF", 14, c["accent"], 700,
+                 extra='text-anchor="middle"')
+    body += text(pad + 44, 48, "APPLICATION DEVELOPMENT", 10 if mobile else 12,
+                 c["accent"], 500, True,
+                 'letter-spacing="1"' if mobile else 'letter-spacing="1.5"')
+    body += text(pad, 110, "Olufemi Rafael Fadipe", 34 if mobile else 40,
+                 c["fg"], 700, extra='letter-spacing="-1"')
+    tagline = ["Application development", "Automation · Local AI"] if mobile else [
+        "Application development · Automation · Local AI"]
+    body += lines(pad, 150, tagline, 19 if mobile else 20, 29, c["muted"])
+    if not mobile:
+        body += f'<path d="M{pad} 181h42" stroke="{c["accent"]}" stroke-width="3" stroke-linecap="round"/>'
+    body += text(pad, 217, "CAYMAN ISLANDS", 11 if mobile else 12, c["muted"],
+                 400, True, 'letter-spacing="1.5"')
+    tx, ty, scale = (318, 139, .34) if mobile else (730, 42, .76)
+    body += f'''<g transform="translate({tx} {ty}) scale({scale})">
+      <rect width="250" height="196" rx="14" fill="{c['panel']}" stroke="{c['line']}" stroke-width="1.5"/>
+      <path d="M0 39H250" stroke="{c['line']}" stroke-width="1.5"/>
+      <circle cx="20" cy="20" r="3.5" fill="{c['accent']}"/>
+      <circle cx="34" cy="20" r="3.5" fill="{c['dim']}" fill-opacity=".55"/>
+      <circle cx="48" cy="20" r="3.5" fill="{c['dim']}" fill-opacity=".3"/>
+      <path d="m31 69 17 14-17 14M61 98h20" stroke="{c['accent']}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M31 126H132M31 143H184M31 160H107" stroke="{c['dim']}" stroke-opacity=".65" stroke-width="5" stroke-linecap="round"/>
+      <path d="m165 83 10 10 21-24" stroke="{c['accent']}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>'''
+    body += f'<path d="M{pad} 246H{width - pad}" stroke="{c["line"]}"/>'
+    body += text(pad, 282, "ABOUT ME", 11 if mobile else 12, c["accent"],
+                 500, True, 'letter-spacing="1.5"')
+    _, heading, description = NARRATIVES["intro"]
+    headings = wrap(heading, width=22 if mobile else 43)
+    for index, value in enumerate(headings):
+        body += text(pad, 331 + index * 40, value, 32 if mobile else 36,
+                     c["fg"], 700, extra='letter-spacing="-.7"')
+    paragraph_y = 373 + (len(headings) - 1) * 40
+    paragraph_lines = wrap(description, width=33 if mobile else 76)
+    line_height = 30 if mobile else 32
+    body += lines(pad, paragraph_y, paragraph_lines, 21 if mobile else 23,
+                  line_height, c["muted"])
+    height = paragraph_y + (len(paragraph_lines) - 1) * line_height + 36
+    return shell(width, height, c, "Olufemi Rafael Fadipe — Building practical applications",
+                 "Application development, automation and local AI. Cayman Islands. " + description,
+                 body)
+
+
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
     for theme in PALETTES:
         for mobile in (False, True):
             suffix = f"{theme}{'-mobile' if mobile else ''}.svg"
+            (ROOT / "assets" / f"profile-{suffix}").write_text(
+                profile_card(theme, mobile), encoding="utf-8")
             for index, project in enumerate(PROJECTS, start=1):
                 (DEST / f"{project[0]}-{suffix}").write_text(
                     project_card(project, index, theme, mobile), encoding="utf-8")
             (DEST / f"tools-{suffix}").write_text(tools_card(theme, mobile), encoding="utf-8")
             (DEST / f"jobbot-{suffix}").write_text(jobbot_card(theme, mobile), encoding="utf-8")
             for slug in NARRATIVES:
+                if slug == "intro":
+                    continue
                 (DEST / f"{slug}-{suffix}").write_text(
                     narrative_card(slug, theme, mobile), encoding="utf-8")
-    print(f"Rendered {len(list(DEST.glob('*.svg')))} SVG cards.")
+    print("Rendered profile banners and section cards.")
 
 
 if __name__ == "__main__":

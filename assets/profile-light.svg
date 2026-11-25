@@ -1,31 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">Olufemi Rafael Fadipe</title>
-  <desc id="desc">Application development, automation and local AI. Cayman Islands.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="505" viewBox="0 0 960 505" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Olufemi Rafael Fadipe — Building practical applications</title>
+  <desc id="desc">Application development, automation and local AI. Cayman Islands. I&#x27;m Rafael, an Information Technology student at Florida International University, based in the Cayman Islands. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation.</desc>
   <defs>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" stroke="#D3E3DF" stroke-width="0.7"/>
-    </pattern>
-    <linearGradient id="fade" x1="830" y1="170" x2="1280" y2="170" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F2F7F6"/><stop offset="1" stop-color="#F2F7F6" stop-opacity="0"/>
-    </linearGradient>
-    <clipPath id="clip"><rect width="1280" height="340" rx="22"/></clipPath>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7"/></pattern>
+    <linearGradient id="fade" x1="576" y1="0" x2="960" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6"/><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2"/></linearGradient>
+    <clipPath id="clip"><rect width="960" height="505" rx="20"/></clipPath>
   </defs>
   <g clip-path="url(#clip)">
-    <rect width="1280" height="340" rx="22" fill="#F2F7F6"/>
-    <rect x="830" width="450" height="340" fill="url(#grid)"/>
-    <rect x="830" width="450" height="340" fill="url(#fade)"/>
-    <rect x="0" y="52" width="5" height="236" rx="2.5" fill="#166C5B"/>
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif">
-      <rect x="52" y="43" width="37" height="27" rx="6" fill="#166C5B" fill-opacity=".12"/>
-      <text x="70.5" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#166C5B">RF</text>
-      <text x="104" y="61" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="14" font-weight="500" letter-spacing="2" fill="#215B4C">APPLICATION DEVELOPMENT</text>
-      <text x="52" y="146" font-size="54" font-weight="700" letter-spacing="-1.8" fill="#122C35">Olufemi Rafael Fadipe</text>
-      <text x="54" y="194" font-size="25" fill="#506971">Application development · Automation · Local AI</text>
-      <path d="M54 235H110" stroke="#166C5B" stroke-width="3" stroke-linecap="round"/>
-      <text x="54" y="282" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="14" letter-spacing="1.8" fill="#506971">CAYMAN ISLANDS</text>
-    </g>
-    <g transform="translate(953 71)">
-      <rect x="0" y="0" width="250" height="196" rx="14" fill="#E8F1EE" stroke="#D3E3DF" stroke-width="1.5"/>
+    <rect width="960" height="505" fill="#F2F7F6"/>
+    <rect x="576" width="384" height="505" fill="url(#grid)"/>
+    <rect x="576" width="384" height="505" fill="url(#fade)"/>
+    <rect x="1" y="34" width="3" height="437" rx="1.5" fill="#166C5B"/>
+    <rect x="36" y="32" width="30" height="24" rx="5" fill="#166C5B" fill-opacity=".12"/><text x="51" y="49" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="14" font-weight="700" fill="#166C5B" text-anchor="middle">RF</text><text x="80" y="48" font-family="&#x27;SFMono-Regular&#x27;, Consolas, &#x27;Liberation Mono&#x27;, monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">APPLICATION DEVELOPMENT</text><text x="36" y="110" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="40" font-weight="700" fill="#122C35" letter-spacing="-1">Olufemi Rafael Fadipe</text><text x="36" y="150" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="20" font-weight="400" fill="#506971" >Application development · Automation · Local AI</text><path d="M36 181h42" stroke="#166C5B" stroke-width="3" stroke-linecap="round"/><text x="36" y="217" font-family="&#x27;SFMono-Regular&#x27;, Consolas, &#x27;Liberation Mono&#x27;, monospace" font-size="12" font-weight="400" fill="#506971" letter-spacing="1.5">CAYMAN ISLANDS</text><g transform="translate(730 42) scale(0.76)">
+      <rect width="250" height="196" rx="14" fill="#E8F1EE" stroke="#D3E3DF" stroke-width="1.5"/>
       <path d="M0 39H250" stroke="#D3E3DF" stroke-width="1.5"/>
       <circle cx="20" cy="20" r="3.5" fill="#166C5B"/>
       <circle cx="34" cy="20" r="3.5" fill="#91B3A9" fill-opacity=".55"/>
@@ -33,7 +20,7 @@
       <path d="m31 69 17 14-17 14M61 98h20" stroke="#166C5B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M31 126H132M31 143H184M31 160H107" stroke="#91B3A9" stroke-opacity=".65" stroke-width="5" stroke-linecap="round"/>
       <path d="m165 83 10 10 21-24" stroke="#166C5B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <rect x=".5" y=".5" width="1279" height="339" rx="21.5" stroke="#D3E3DF"/>
+    </g><path d="M36 246H924" stroke="#D3E3DF"/><text x="36" y="282" font-family="&#x27;SFMono-Regular&#x27;, Consolas, &#x27;Liberation Mono&#x27;, monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">ABOUT ME</text><text x="36" y="331" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="36" font-weight="700" fill="#122C35" letter-spacing="-.7">Building practical applications.</text><text x="36" y="373" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >I&#x27;m Rafael, an Information Technology student at Florida International</text><text x="36" y="405" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >University, based in the Cayman Islands. I work with Python, Java, and web</text><text x="36" y="437" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >technologies to build applications around problems I encounter, with a</text><text x="36" y="469" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >growing focus on backend development and automation.</text>
+    <rect x=".5" y=".5" width="959" height="504" rx="19.5" stroke="#D3E3DF"/>
   </g>
 </svg>
