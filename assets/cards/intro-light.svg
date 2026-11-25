@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="273" viewBox="0 0 960 273" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Building practical applications.</title>
+  <desc id="desc">I&#x27;m Rafael, an Information Technology student at Florida International University, based in the Cayman Islands. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7"/></pattern>
+    <linearGradient id="fade" x1="576" y1="0" x2="960" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6"/><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2"/></linearGradient>
+    <clipPath id="clip"><rect width="960" height="273" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="960" height="273" fill="#F2F7F6"/>
+    <rect x="576" width="384" height="273" fill="url(#grid)"/>
+    <rect x="576" width="384" height="273" fill="url(#fade)"/>
+    <rect x="1" y="34" width="3" height="205" rx="1.5" fill="#166C5B"/>
+    <text x="36" y="42" font-family="&#x27;SFMono-Regular&#x27;, Consolas, &#x27;Liberation Mono&#x27;, monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">ABOUT ME</text><text x="36" y="98" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="38" font-weight="700" fill="#122C35" letter-spacing="-.7">Building practical applications.</text><text x="36" y="141" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >I&#x27;m Rafael, an Information Technology student at Florida International</text><text x="36" y="173" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >University, based in the Cayman Islands. I work with Python, Java, and web</text><text x="36" y="205" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >technologies to build applications around problems I encounter, with a</text><text x="36" y="237" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="23" font-weight="400" fill="#506971" >growing focus on backend development and automation.</text>
+    <rect x=".5" y=".5" width="959" height="272" rx="19.5" stroke="#D3E3DF"/>
+  </g>
+</svg>

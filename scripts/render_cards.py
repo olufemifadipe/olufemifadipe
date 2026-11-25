@@ -37,6 +37,27 @@ FEATURES = [
     ("Track", "SQLite history, application status, and CSV/JSON exports."),
     ("Test", "Automated tests and a local Playwright practice demo."),
 ]
+NARRATIVES = {
+    "intro": (
+        "ABOUT ME", "Building practical applications.",
+        "I'm Rafael, an Information Technology student at Florida International University, "
+        "based in the Cayman Islands. I work with Python, Java, and web technologies to "
+        "build applications around problems I encounter, with a growing focus on backend "
+        "development and automation.",
+    ),
+    "nova": (
+        "LOCAL AI & LINUX", "Nova & my home lab",
+        "I'm also building Nova, a local AI assistant, and running a home lab with dedicated "
+        "machines for AI workloads, development, and Linux practice. It gives me a place to "
+        "work with Ollama, SSH, and private networking while learning how to deploy and "
+        "troubleshoot applications across machines.",
+    ),
+    "opportunities": (
+        "OPEN TO OPPORTUNITIES", "Opportunities & collaboration",
+        "I'm open to software development internships, junior developer roles, and project "
+        "collaborations, especially in backend development, automation, and web applications.",
+    ),
+}
 
 
 def text(x, y, value, size, color, weight=400, mono=False, extra=""):
@@ -142,7 +163,7 @@ def tools_card(theme, mobile):
 def jobbot_card(theme, mobile):
     c = PALETTES[theme]
     width, pad = (440, 30) if mobile else (960, 36)
-    body = text(pad, 42, "CURRENT BUILD", 12, c["accent"], 500, True,
+    body = text(pad, 42, "WHAT I'M BUILDING", 12, c["accent"], 500, True,
                 'letter-spacing="1.8"')
     body += text(pad, 98, "Job Application Bot", 32 if mobile else 44, c["fg"], 700,
                  extra='letter-spacing="-.8"')
@@ -178,6 +199,39 @@ def jobbot_card(theme, mobile):
     return shell(width, status_y + (len(status) - 1) * 24 + 30, c, "Job Application Bot", desc, body)
 
 
+def narrative_card(slug, theme, mobile):
+    c = PALETTES[theme]
+    width, pad = (440, 30) if mobile else (960, 36)
+    label, title, description = NARRATIVES[slug]
+    body = text(pad, 42, label, 11 if mobile else 12, c["accent"], 500, True,
+                'letter-spacing="1.5"')
+    title_lines = wrap(title, width=22 if mobile else 43)
+    title_height = 40 if mobile else 48
+    for index, value in enumerate(title_lines):
+        body += text(pad, 98 + index * title_height, value,
+                     32 if mobile else 38, c["fg"], 700,
+                     extra='letter-spacing="-.7"')
+    paragraph_y = 98 + (len(title_lines) - 1) * title_height + (39 if mobile else 43)
+    description_lines = wrap(description, width=33 if mobile else 76)
+    line_height = 30 if mobile else 32
+    body += lines(pad, paragraph_y, description_lines,
+                  21 if mobile else 23, line_height, c["muted"])
+    last_line = paragraph_y + (len(description_lines) - 1) * line_height
+    height = last_line + 36
+    if slug == "opportunities":
+        button_y, button_width = last_line + 30, 298
+        body += (f'<rect x="{pad}" y="{button_y}" width="{button_width}" height="48" '
+                 f'rx="9" fill="{c["accent"]}"/>')
+        body += text(pad + 18, button_y + 31, "Explore my repositories", 18, c["bg"], 600)
+        arrow_x, arrow_y = pad + button_width - 32, button_y + 18
+        body += (f'<path d="m{arrow_x} {arrow_y + 12} 12-12m-12 0h12v12" '
+                 f'stroke="{c["bg"]}" stroke-width="2" stroke-linecap="round" '
+                 'stroke-linejoin="round"/>')
+        height = button_y + 48 + 32
+        description += " Explore my repositories."
+    return shell(width, height, c, title, description, body)
+
+
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
     for theme in PALETTES:
@@ -188,6 +242,9 @@ def main():
                     project_card(project, index, theme, mobile), encoding="utf-8")
             (DEST / f"tools-{suffix}").write_text(tools_card(theme, mobile), encoding="utf-8")
             (DEST / f"jobbot-{suffix}").write_text(jobbot_card(theme, mobile), encoding="utf-8")
+            for slug in NARRATIVES:
+                (DEST / f"{slug}-{suffix}").write_text(
+                    narrative_card(slug, theme, mobile), encoding="utf-8")
     print(f"Rendered {len(list(DEST.glob('*.svg')))} SVG cards.")
 
 

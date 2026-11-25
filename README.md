@@ -3,11 +3,21 @@
   <img src="assets/profile-light.svg" alt="Olufemi Rafael Fadipe — Application development, automation and local AI" width="100%">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/intro-dark-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/intro-dark.svg">
+  <source media="(max-width: 900px)" srcset="assets/cards/intro-light-mobile.svg">
+  <img src="assets/cards/intro-light.svg" alt="Building practical applications. I'm Rafael, an Information Technology student at Florida International University, based in the Cayman Islands. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation." width="100%">
+</picture>
+
+<details>
+<summary>Read about me</summary>
+
 # Building practical applications.
 
 I'm Rafael, an Information Technology student at **Florida International University**, based in the **Cayman Islands**. I work with Python, Java, and web technologies to build applications around problems I encounter, with a growing focus on backend development and automation.
 
-## What I'm building
+</details>
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/jobbot-dark-mobile.svg">
@@ -99,12 +109,40 @@ Searching for development roles showed me how much time goes into finding releva
 
 </details>
 
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/nova-dark-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/nova-dark.svg">
+  <source media="(max-width: 900px)" srcset="assets/cards/nova-light-mobile.svg">
+  <img src="assets/cards/nova-light.svg" alt="Nova &amp; my home lab. I'm also building Nova, a local AI assistant, and running a home lab with dedicated machines for AI workloads, development, and Linux practice. It gives me a place to work with Ollama, SSH, and private networking while learning how to deploy and troubleshoot applications across machines." width="100%">
+</picture>
+
+<details>
+<summary>Read about Nova and my home lab</summary>
+
 ## Nova & my home lab
 
 I'm also building **Nova**, a local AI assistant, and running a home lab with dedicated machines for AI workloads, development, and Linux practice. It gives me a place to work with Ollama, SSH, and private networking while learning how to deploy and troubleshoot applications across machines.
+
+</details>
+
+<p>
+<a href="https://github.com/olufemifadipe?tab=repositories">
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/cards/opportunities-dark-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/opportunities-dark.svg">
+  <source media="(max-width: 900px)" srcset="assets/cards/opportunities-light-mobile.svg">
+  <img src="assets/cards/opportunities-light.svg" alt="Opportunities &amp; collaboration. I'm open to software development internships, junior developer roles, and project collaborations, especially in backend development, automation, and web applications. Explore my repositories." width="100%">
+</picture>
+</a>
+</p>
+
+<details>
+<summary>Read opportunities and collaboration details</summary>
 
 ## Opportunities & collaboration
 
 I'm open to **software development internships, junior developer roles, and project collaborations**, especially in backend development, automation, and web applications.
 
 [Explore my repositories →](https://github.com/olufemifadipe?tab=repositories)
+
+</details>
