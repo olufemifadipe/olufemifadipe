@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="316" viewBox="0 0 440 316" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Verdant Clay</title>
+  <desc id="desc">A jewelry website prototype with collection filters, product detail dialogs, and WhatsApp enquiries. Open repository.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7"/></pattern>
+    <linearGradient id="fade" x1="264" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6"/><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2"/></linearGradient>
+    <clipPath id="clip"><rect width="440" height="316" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="440" height="316" fill="#F2F7F6"/>
+    <rect x="264" width="176" height="316" fill="url(#grid)"/>
+    <rect x="264" width="176" height="316" fill="url(#fade)"/>
+    <rect x="1" y="34" width="3" height="248" rx="1.5" fill="#166C5B"/>
+    <text x="30" y="42" font-family="&#x27;SFMono-Regular&#x27;, Consolas, &#x27;Liberation Mono&#x27;, monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">01 / WEB DEVELOPMENT</text><text x="30" y="94" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="32" font-weight="700" fill="#122C35" letter-spacing="-.7">Verdant Clay</text><text x="30" y="135" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="21" font-weight="400" fill="#506971" >A jewelry website prototype with</text><text x="30" y="164" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="21" font-weight="400" fill="#506971" >collection filters, product</text><text x="30" y="193" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="21" font-weight="400" fill="#506971" >detail dialogs, and WhatsApp</text><text x="30" y="222" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="21" font-weight="400" fill="#506971" >enquiries.</text><rect x="30" y="250" width="71" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF"/><text x="43" y="271" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B" >HTML</text><rect x="109" y="250" width="57" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF"/><text x="122" y="271" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B" >CSS</text><rect x="174" y="250" width="123" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF"/><text x="187" y="271" font-family="-apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B" >JavaScript</text><path d="m395 45 15-15m-15 0h15v15" stroke="#166C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x=".5" y=".5" width="439" height="315" rx="19.5" stroke="#D3E3DF"/>
+  </g>
+</svg>
