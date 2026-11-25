@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="315" viewBox="0 2555 960 315" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Opportunities &amp; collaboration. I'm open to software development internships, junior developer roles, and project collaborations, especially in backend development, automation, and web applications. Explore my repositories.</title>
+  <desc id="desc">Opportunities &amp; collaboration. I'm open to software development internships, junior developer roles, and project collaborations, especially in backend development, automation, and web applications. Explore my repositories.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7" /></pattern>
+    <linearGradient id="fade" x1="576" y1="0" x2="960" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6" /><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2" /></linearGradient>
+    <clipPath id="clip"><rect width="960" height="2870" rx="20" /></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="960" height="2870" fill="#F2F7F6" />
+    <rect x="576" width="384" height="2870" fill="url(#grid)" />
+    <rect x="576" width="384" height="2870" fill="url(#fade)" />
+    <rect x="1" y="34" width="3" height="2802" rx="1.5" fill="#166C5B" />
+    <g transform="translate(0 2555)"><text x="36" y="42" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">OPEN TO OPPORTUNITIES</text><text x="36" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="38" font-weight="700" fill="#122C35" letter-spacing="-.7">Opportunities &amp; collaboration</text><text x="36" y="141" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="23" font-weight="400" fill="#506971">I'm open to software development internships, junior developer roles, and</text><text x="36" y="173" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="23" font-weight="400" fill="#506971">project collaborations, especially in backend development, automation, and</text><text x="36" y="205" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="23" font-weight="400" fill="#506971">web applications.</text><rect x="36" y="235" width="298" height="48" rx="9" fill="#166C5B" /><text x="54" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#F2F7F6">Explore my repositories</text><path d="m302 265 12-12m-12 0h12v12" stroke="#F2F7F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g><path d="M36 2555H924" stroke="#D3E3DF" />
+    <rect x=".5" y=".5" width="959" height="2869" rx="19.5" stroke="#D3E3DF" />
+  </g>
+</svg>

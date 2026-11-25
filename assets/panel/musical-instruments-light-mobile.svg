@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="345" viewBox="0 2391 440 345" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Musical Instruments. An object-oriented implementation of the Strategy Pattern, separating instruments from interchangeable playing behaviors. Technologies: Python, OOP, Design patterns. Open repository.</title>
+  <desc id="desc">Musical Instruments. An object-oriented implementation of the Strategy Pattern, separating instruments from interchangeable playing behaviors. Technologies: Python, OOP, Design patterns. Open repository.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7" /></pattern>
+    <linearGradient id="fade" x1="264" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6" /><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2" /></linearGradient>
+    <clipPath id="clip"><rect width="440" height="4238" rx="20" /></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="440" height="4238" fill="#F2F7F6" />
+    <rect x="264" width="176" height="4238" fill="url(#grid)" />
+    <rect x="264" width="176" height="4238" fill="url(#fade)" />
+    <rect x="1" y="34" width="3" height="4170" rx="1.5" fill="#166C5B" />
+    <g transform="translate(0 2391)"><text x="30" y="42" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">03 / SOFTWARE DESIGN</text><text x="30" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#122C35" letter-spacing="-.7">Musical Instruments</text><text x="30" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="400" fill="#506971">An object-oriented implementation</text><text x="30" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="400" fill="#506971">of the Strategy Pattern,</text><text x="30" y="193" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="400" fill="#506971">separating instruments from</text><text x="30" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="400" fill="#506971">interchangeable playing</text><text x="30" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="400" fill="#506971">behaviors.</text><rect x="30" y="279" width="87" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="43" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B">Python</text><rect x="125" y="279" width="57" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="138" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B">OOP</text><rect x="190" y="279" width="168" height="34" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="203" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="500" fill="#166C5B">Design patterns</text><path d="m395 45 15-15m-15 0h15v15" stroke="#166C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g><path d="M30 2391H410" stroke="#D3E3DF" />
+    <rect x=".5" y=".5" width="439" height="4237" rx="19.5" stroke="#D3E3DF" />
+  </g>
+</svg>

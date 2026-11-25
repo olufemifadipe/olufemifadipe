@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="262" viewBox="0 1423 960 262" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Air Quality Explorer. A Python application that retrieves IQAir air quality and weather data, processes JSON responses, and generates a Folium map. Technologies: Python, REST APIs, Folium. Open repository.</title>
+  <desc id="desc">Air Quality Explorer. A Python application that retrieves IQAir air quality and weather data, processes JSON responses, and generates a Folium map. Technologies: Python, REST APIs, Folium. Open repository.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#D3E3DF" stroke-width=".7" /></pattern>
+    <linearGradient id="fade" x1="576" y1="0" x2="960" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F2F7F6" /><stop offset="1" stop-color="#F2F7F6" stop-opacity=".2" /></linearGradient>
+    <clipPath id="clip"><rect width="960" height="2870" rx="20" /></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="960" height="2870" fill="#F2F7F6" />
+    <rect x="576" width="384" height="2870" fill="url(#grid)" />
+    <rect x="576" width="384" height="2870" fill="url(#fade)" />
+    <rect x="1" y="34" width="3" height="2802" rx="1.5" fill="#166C5B" />
+    <g transform="translate(0 1423)"><text x="36" y="42" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="500" fill="#166C5B" letter-spacing="1.5">02 / API INTEGRATION</text><text x="36" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="36" font-weight="700" fill="#122C35" letter-spacing="-.7">Air Quality Explorer</text><text x="36" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="23" font-weight="400" fill="#506971">A Python application that retrieves IQAir air quality and weather data,</text><text x="36" y="167" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="23" font-weight="400" fill="#506971">processes JSON responses, and generates a Folium map.</text><rect x="36" y="195" width="91" height="35" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="49" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#166C5B">Python</text><rect x="135" y="195" width="112" height="35" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="148" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#166C5B">REST APIs</text><rect x="255" y="195" width="79" height="35" rx="7" fill="#166C5B" fill-opacity=".085" stroke="#D3E3DF" /><text x="268" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#166C5B">Folium</text><path d="m909 45 15-15m-15 0h15v15" stroke="#166C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><text x="894" y="42" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="500" fill="#506971" text-anchor="end" letter-spacing="1.2">VIEW SOURCE</text>
+    </g><path d="M36 1423H924" stroke="#D3E3DF" />
+    <rect x=".5" y=".5" width="959" height="2869" rx="19.5" stroke="#D3E3DF" />
+  </g>
+</svg>

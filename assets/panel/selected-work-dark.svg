@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="76" viewBox="0 1085 960 76" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Selected work.</title>
+  <desc id="desc">Selected work.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#253748" stroke-width=".7" /></pattern>
+    <linearGradient id="fade" x1="576" y1="0" x2="960" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1724" /><stop offset="1" stop-color="#0D1724" stop-opacity=".2" /></linearGradient>
+    <clipPath id="clip"><rect width="960" height="2870" rx="20" /></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="960" height="2870" fill="#0D1724" />
+    <rect x="576" width="384" height="2870" fill="url(#grid)" />
+    <rect x="576" width="384" height="2870" fill="url(#fade)" />
+    <rect x="1" y="34" width="3" height="2802" rx="1.5" fill="#7EE2C2" />
+    <g transform="translate(0 1085)"><text x="36" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="36" font-weight="700" fill="#F0F6FC" letter-spacing="-.7">Selected work</text>
+    </g><path d="M36 1085H924" stroke="#253748" />
+    <rect x=".5" y=".5" width="959" height="2869" rx="19.5" stroke="#253748" />
+  </g>
+</svg>

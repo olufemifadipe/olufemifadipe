@@ -3,10 +3,11 @@
 from html import escape
 from pathlib import Path
 from textwrap import wrap
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEST = ROOT / "assets" / "cards"
+DEST = ROOT / "assets" / "panel"
 FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
 MONO = "'SFMono-Regular', Consolas, 'Liberation Mono', monospace"
 PALETTES = {
@@ -137,16 +138,20 @@ def project_card(project, index, theme, mobile):
     return shell(width, tags_bottom + 32, c, title, description + " Open repository.", body)
 
 
-def tools_card(theme, mobile):
+def tools_card(theme, mobile, heading=False):
     c = PALETTES[theme]
     width, pad = (440, 30) if mobile else (960, 36)
     body = text(pad, 42, "DEVELOPER TOOLKIT", 12, c["accent"], 500, True,
                 'letter-spacing="1.8"')
-    y, bottom = 98, 0
+    if heading:
+        body += text(pad, 94, "Tools I work with", 32 if mobile else 36,
+                     c["fg"], 700, extra='letter-spacing="-.7"')
+    shift = 47 if heading else 0
+    y, bottom = 98 + shift, 0
     for i, (label, values) in enumerate(TOOLS):
         x = pad if mobile else pad + i * 304
         if i and not mobile:
-            body += f'<path d="M{x - 20} 80V254" stroke="{c["line"]}"/>'
+            body += f'<path d="M{x - 20} {80 + shift}V{254 + shift}" stroke="{c["line"]}"/>'
         if i and mobile:
             body += f'<path d="M{pad} {y - 31}H{width - pad}" stroke="{c["line"]}"/>'
         body += text(x, y, label, 23 if mobile else 22, c["fg"], 600)
@@ -155,7 +160,7 @@ def tools_card(theme, mobile):
         body += tags
         if mobile:
             y = bottom + 71
-    height = bottom + 35 if mobile else 288
+    height = bottom + 35 if mobile else 288 + shift
     desc = ". ".join(label + ": " + ", ".join(values) for label, values in TOOLS) + "."
     return shell(width, height, c, "Tools I work with", desc, body)
 
@@ -282,24 +287,127 @@ def profile_card(theme, mobile):
                  body)
 
 
+PROJECT_LINKS = {
+    "verdant-clay": "https://github.com/olufemifadipe/verdant-clay-website",
+    "air-quality": "https://github.com/olufemifadipe/aqi_project",
+    "musical-instruments": "https://github.com/olufemifadipe/Musical-Instruments-Strategy-Pattern",
+}
+REPOSITORIES = "https://github.com/olufemifadipe?tab=repositories"
+SVG_NS = "http://www.w3.org/2000/svg"
+ET.register_namespace("", SVG_NS)
+
+
+def section_content(svg):
+    """Reuse each section's content without its individual background or frame."""
+    root = ET.fromstring(svg)
+    group = root.find(f"{{{SVG_NS}}}g")
+    children = list(group)
+    assert children[-1].attrib.get("x") == ".5"
+    body = "".join(ET.tostring(e, encoding="unicode") for e in children[4:-1])
+    return int(root.attrib["width"]), int(root.attrib["height"]), body.replace(
+        f' xmlns="{SVG_NS}"', "")
+
+
+def panel_sections(theme, mobile):
+    """Every slice shares the full panel's coordinates, grid, and outer border."""
+    c = PALETTES[theme]
+    width, pad = (440, 30) if mobile else (960, 36)
+    items = [
+        ("profile", profile_card(theme, mobile),
+         "Olufemi Rafael Fadipe. Application development, automation and local AI. "
+         "Cayman Islands. Building practical applications. " + NARRATIVES["intro"][2], None),
+        ("jobbot", jobbot_card(theme, mobile),
+         "What I'm building: Job Application Bot. Python job discovery through Greenhouse "
+         "and Lever feeds, skills matching, location and eligibility review notes, SQLite "
+         "application tracking, CSV and JSON exports, automated tests, and a local Playwright "
+         "practice demo. Working CLI; active development; private source.", None),
+        ("selected-work", shell(width, 76, c, "Selected work", "Selected work.",
+         text(pad, 50, "Selected work", 32 if mobile else 36, c["fg"], 700,
+              extra='letter-spacing="-.7"')), "Selected work.", None),
+    ]
+    for index, project in enumerate(PROJECTS, start=1):
+        slug, title, category, description, tech = project
+        items.append((slug, project_card(project, index, theme, mobile),
+                      title + ". " + description + " Technologies: " + ", ".join(tech)
+                      + ". Open repository.", PROJECT_LINKS[slug]))
+    tools_description = "Tools I work with. " + ". ".join(
+        title + ": " + ", ".join(values) for title, values in TOOLS) + "."
+    items.append(("tools", tools_card(theme, mobile, heading=True), tools_description, None))
+    for slug in ("nova", "opportunities"):
+        _, title, description = NARRATIVES[slug]
+        alt = title + ". " + description
+        if slug == "opportunities":
+            alt += " Explore my repositories."
+        items.append((slug, narrative_card(slug, theme, mobile), alt,
+                      REPOSITORIES if slug == "opportunities" else None))
+    parts, offset = [], 0
+    for slug, svg, alt, href in items:
+        part_width, height, body = section_content(svg)
+        assert part_width == width
+        parts.append(dict(slug=slug, width=width, height=height, offset=offset,
+                          body=body, alt=alt, href=href))
+        offset += height
+    return parts, offset
+
+
+def positioned_section(part, palette):
+    offset = part["offset"]
+    body = f'<g transform="translate(0 {offset})">{part["body"]}</g>'
+    if offset and part["slug"] != "verdant-clay":
+        pad = 30 if part["width"] == 440 else 36
+        body += (f'<path d="M{pad} {offset}H{part["width"] - pad}" '
+                 f'stroke="{palette["line"]}"/>')
+    return body
+
+
+def render_panel(theme, mobile):
+    parts, total = panel_sections(theme, mobile)
+    palette = PALETTES[theme]
+    width = parts[0]["width"]
+    suffix = f"{theme}{'-mobile' if mobile else ''}.svg"
+    for part in parts:
+        svg = shell(width, total, palette, part["alt"], part["alt"],
+                    positioned_section(part, palette))
+        root = ET.fromstring(svg)
+        root.set("height", str(part["height"]))
+        root.set("viewBox", f'0 {part["offset"]} {width} {part["height"]}')
+        (DEST / f'{part["slug"]}-{suffix}').write_text(
+            ET.tostring(root, encoding="unicode") + "\n", encoding="utf-8")
+    full = shell(width, total, palette, "Olufemi Rafael Fadipe", "Developer profile.",
+                 "".join(positioned_section(p, palette) for p in parts))
+    return parts, full
+
+
+def render_readme(parts):
+    # Floated full-width images touch edge to edge; the final clear keeps the
+    # complete panel inside one paragraph. Native anchors preserve the links.
+    output = ["<p>"]
+    for part in parts:
+        slug = part["slug"]
+        if part["href"]:
+            output.append(f'<a href="{escape(part["href"], quote=True)}">')
+        output.extend([
+            "<picture>",
+            f'  <source media="(prefers-color-scheme: dark) and (max-width: 900px)" srcset="assets/panel/{slug}-dark-mobile.svg">',
+            f'  <source media="(prefers-color-scheme: dark)" srcset="assets/panel/{slug}-dark.svg">',
+            f'  <source media="(max-width: 900px)" srcset="assets/panel/{slug}-light-mobile.svg">',
+            f'  <img align="left" src="assets/panel/{slug}-light.svg" alt="{escape(part["alt"], quote=True)}" width="100%">',
+            "</picture>",
+        ])
+        if part["href"]:
+            output.append("</a>")
+    output.extend(['<br clear="all">', "</p>", ""])
+    return "\n".join(output)
+
+
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
+    parts = None
     for theme in PALETTES:
         for mobile in (False, True):
-            suffix = f"{theme}{'-mobile' if mobile else ''}.svg"
-            (ROOT / "assets" / f"profile-{suffix}").write_text(
-                profile_card(theme, mobile), encoding="utf-8")
-            for index, project in enumerate(PROJECTS, start=1):
-                (DEST / f"{project[0]}-{suffix}").write_text(
-                    project_card(project, index, theme, mobile), encoding="utf-8")
-            (DEST / f"tools-{suffix}").write_text(tools_card(theme, mobile), encoding="utf-8")
-            (DEST / f"jobbot-{suffix}").write_text(jobbot_card(theme, mobile), encoding="utf-8")
-            for slug in NARRATIVES:
-                if slug == "intro":
-                    continue
-                (DEST / f"{slug}-{suffix}").write_text(
-                    narrative_card(slug, theme, mobile), encoding="utf-8")
-    print("Rendered profile banners and section cards.")
+            parts, _ = render_panel(theme, mobile)
+    (ROOT / "README.md").write_text(render_readme(parts), encoding="utf-8")
+    print("Rendered one continuous profile panel with native repository links.")
 
 
 if __name__ == "__main__":
